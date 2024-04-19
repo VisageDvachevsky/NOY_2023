@@ -12,6 +12,9 @@ TagManager:
   - ReflectionStatic
   - RadiusInput
   - MassInput
+  - g_text
+  - mass_text
+  - radius_text
   layers:
   - Default
   - TransparentFX
