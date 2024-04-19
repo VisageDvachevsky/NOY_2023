@@ -9,6 +9,9 @@ TagManager:
   - Destroyer
   - MiniWorldCamera
   - Water
+  - ReflectionStatic
+  - RadiusInput
+  - MassInput
   layers:
   - Default
   - TransparentFX
