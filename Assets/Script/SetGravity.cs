@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using com.zibra.liquid.Solver;
+using com.zibra.liquid.DataStructures;
 
 public class SetGravity : MonoBehaviour
 {
@@ -7,7 +9,10 @@ public class SetGravity : MonoBehaviour
     {
         float gravity = PlayerPrefs.GetFloat("Gravity", 9.81f);
         Physics.gravity = new Vector3(0, -gravity, 0);
-
+        foreach (var item in FindObjectsOfType<ZibraLiquidSolverParameters>())
+        {
+            item.Gravity = new Vector3(0, -gravity, 0);
+        }
         float mass = PlayerPrefs.GetFloat("Mass", 0f); 
         float radius = PlayerPrefs.GetFloat("Radius", 0f); 
 
